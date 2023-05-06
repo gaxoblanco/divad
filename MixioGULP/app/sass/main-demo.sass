@@ -1,0 +1,853 @@
+/*! ------------------------------------------------
+   Project Name: Mixio - Five in One Elegant Coming Soon and Landing Page Template
+   Project Description: Mixio - awesome coming soon template to kick-start your project
+   Tags: mix_design, coming soon, under construction, template, landing page, portfolio, one page, responsive, html5, css3, creative, clean, agency, personal page
+   Version: 2.0.0
+   Build Date: July 2018
+   Last Update: October 2021
+   This product is available exclusively on Themeforest
+   Author: mix_design
+   Author URI: http://mixdesign.club
+   File name: main-demo.css
+   ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Animations
+    2. Loader
+    3. Loading Animation
+    4. Fonts
+    5. Base CSS Styles
+    6. Typography
+    7. Buttons & Triggers
+    8. Intro
+    9. Preview Sections
+    10. Subscribe Section
+    11. Footer
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Libs, Mixins and Variables
+@import "partials/layout"
+@import "partials/mixins"
+@import "partials/variables"
+
+/* ------------------------------------------------*/
+/* Animations Start
+/* ------------------------------------------------*/
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes fade
+  0%
+    opacity: 0
+  50%
+    opacity: 0.8
+  100%
+    opacity: 0
+
+@keyframes slideInDown
+  from
+    transform: translate3d(0, -50px, 0)
+    opacity: 0
+    visibility: visible
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.slideInDown
+  animation-iteration-count: 1
+  animation-name: slideInDown
+  animation-duration: .6s
+  animation-fill-mode: both
+
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 50px, 0)
+    opacity: 0
+    visibility: visible
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.slideInUp
+  animation-name: slideInUp
+  animation-iteration-count: 1
+  animation-duration: .6s
+  animation-fill-mode: both
+
+@keyframes flipOutY
+  from
+    transform: perspective(400px)
+  to
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg)
+    opacity: 0
+
+.flipOutY
+  backface-visibility: visible
+  animation-name: flipOutY
+  animation-duration: .6s
+  animation-fill-mode: both
+
+@keyframes fadeOutDown
+  from
+    opacity: 1
+  to
+    opacity: 0
+    transform: translate3d(0, 50px, 0)
+
+.fadeOutDown
+  animation: fadeOutDown .6s 1
+  animation-fill-mode: both
+/* ------------------------------------------------*/
+/* Animations End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Loader Styles Start
+/* ------------------------------------------------*/
+.loader
+  +position(fixed, 0 0 0 0)
+  z-index: 10000
+  background-color: shade($bsc-grey-dark, 40%)
+  opacity: 1
+  visibility: visible
+  transition: visibility .4s .0s, opacity .4s, background-color .6s ease-in-out
+  &.fade-dark
+    background-color: shade($bsc-grey-dark, 60%)
+  &.loaded
+    opacity: 0
+    visibility: hidden
+
+.loader__content
+  position: absolute
+  +center
+
+.loader__logo
+  display: block
+  width: 6rem
+  height: 6rem
+  margin: 0 auto 2.4rem
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.loader__caption
+  margin: 0 auto
+  text-align: center
+  .loading-text
+    display: block
+    color: rgba(255,255,255,.6)
+    text-transform: uppercase
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 1.4rem
+    letter-spacing: .2rem
+  .loading-dots
+    position: relative
+    display: inline-block
+    text-align: center
+    +clearfix
+    .dot
+      float: left
+      width: .4rem
+      height: .4rem
+      margin: 0 0.4rem
+      background: #FFFFFF
+      opacity: 0
+      animation: fade 1s infinite
+      &:nth-of-type(1)
+        animation-delay: 0s
+      &:nth-of-type(2)
+        animation-delay: .1s
+      &:nth-of-type(3)
+        animation-delay: .2s
+/* ------------------------------------------------*/
+/* Loader Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Loading Animation Styles Start
+/* ------------------------------------------------*/
+body
+  &.loaded
+    // 1-st Items Loading
+    .headline
+      h1
+        animation: .6s ease-in-out 1 both slideInUp
+    .headline__icon
+      animation: .6s ease-in-out 1 both slideInDown
+
+    // 2-nd Items Loading
+    .header__logo,
+    .header__buttons
+        animation: .6s ease-in-out .6s 1 both fadeIn
+
+    // 3-rd Items loading
+    .intro__illusrations
+      .illustration-1
+        animation: .6s ease-in-out .6s 1 both fadeIn
+      .illustration-2
+        animation: .3s ease-in-out 1s 1 both slideInUp
+      .illustration-4
+        animation: .3s ease-in-out 1.2s 1 both slideInUp
+      .illustration-3
+        animation: .3s ease-in-out 1.3s 1 both slideInUp
+      .illustration-5
+        animation: .3s ease-in-out 1.4s 1 both slideInUp
+/* ------------------------------------------------*/
+/* Loading Animation Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Fonts Start
+/* ------------------------------------------------*/
+/* Raleway Font */
++font-face("Raleway", "../fonts/RalewayRegular/RalewayRegular", 400, $file-formats: eot woff ttf)
++font-face("Raleway", "../fonts/RalewayMedium/RalewayMedium", 500, $file-formats: eot woff ttf)
++font-face("Raleway", "../fonts/RalewaySemiBold/RalewaySemiBold-LiningNums", 600, normal, $file-formats: eot woff woff2 ttf)
++font-face("Raleway", "../fonts/RalewayBold/RalewayBold", 700, $file-formats: eot woff ttf)
++font-face("Raleway", "../fonts/RalewayExtraBold/RalewayExtraBold", 800, $file-formats: eot woff ttf)
+
+/* Playfair Display Font */
++font-face("PlayfairDisplay", "../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold-LiningNums", 700, normal, $file-formats: eot woff woff2 ttf)
++font-face("PlayfairDisplay", "../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic", 700, italic, $file-formats: eot woff ttf)
++font-face("PlayfairDisplay", "../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic", 400, italic, $file-formats: eot woff ttf)
+/* ------------------------------------------------*/
+/* Fonts End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Base CSS Styles Start
+/* ------------------------------------------------*/
+*, *::before, *::after
+  box-sizing: border-box
+
+button:active, button:focus
+  outline: none !important
+
+button::-moz-focus-inner
+  border: 0 !important
+
+input::-moz-focus-inner
+  border: 0 !important
+
+::selection
+  background-color: $bsc-grey-dark
+  color: $bsc-grey-medium
+  text-shadow: none
+
+html
+  font-family: sans-serif
+  font-size: 62.5%
+  +font-smoothing
+
+body
+  position: relative
+  min-width: 320px
+  overflow-x: hidden !important
+  font: normal 400 1.6rem/1.7 $default-font
+  background-color: $bsc-white
+  color: $txt-medium
+
+section
+  position: relative
+  width: 100%
+  min-width: 320px
+
+img
+  display: block
+  width: 100%
+  height: auto
+
+a
+  text-decoration: none
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  outline: 0
+  color: $txt-medium
+  &:hover,
+  &:active,
+  &:visited
+    text-decoration: none
+    color: #191919
+
+.overflow-hidden
+  overflow: hidden !important
+
+.no-padding
+  padding: 0
+
+.color-layer
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.color-layer-medium
+  +cover-medium
+
+.color-layer-dark
+  +cover-dark
+/* ------------------------------------------------*/
+/* Base CSS Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Typography Styles Start
+/* ------------------------------------------------*/
+h1
+  font: normal 700 3rem/1.2 $caption-font
+  text-transform: uppercase
+  letter-spacing: .3em
+  color: #191919
+  margin: 0
+  padding: 0
+  small
+    display: block
+    font: normal 400 1.4rem/1.7 $default-font
+    text-transform: none
+    letter-spacing: normal
+    margin-top: 1rem
+  +MQ(M)
+    font-size: 4.8rem
+    small
+      font-size: 1.8rem
+
+.headline__title
+  font: normal 700 3rem/1.2 $caption-font
+  color: $txt-black
+  margin-bottom: 1.6rem
+  +MQ(M)
+    font-size: 3.6rem
+    margin-bottom: 2rem
+  +MQ(XXL)
+    font-size: 4.8rem
+    margin-bottom: 2.6rem
+
+.headline__subtitle
+  font: normal 300 1.6rem/1.7 $default-font
+  max-width: 500px
+  margin: 0 auto
+  color: #444444
+  +MQ(XXL)
+    font-size: 1.9rem
+
+figcaption
+  p
+    font: normal 500 1.2rem/1.1 $default-font
+    text-transform: uppercase
+    letter-spacing: .2em
+    color: $txt-black
+/* ------------------------------------------------*/
+/* Typography Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles Start
+/* ------------------------------------------------*/
+.btn
+  position: relative
+  display: inline-block
+  border: none
+  outline: 0
+  padding: 0
+  font: inherit
+  background-color: transparent
+  cursor: pointer
+  text-decoration: none
+  user-select: none
+  overflow: hidden
+  transition: all $animation-duration - .3s ease-in-out
+
+.btn-demo
+  padding: 0 3.6rem
+  height: 5.2rem
+  line-height: 5.1rem
+  text-transform: uppercase
+  font-size: 1.2rem
+  font-weight: 500
+  letter-spacing: .2em
+
+.btn-demo-dark
+  background-color: #191919
+  border: 2px solid #191919
+  color: $txt-white
+  i,
+  span
+    color: $txt-white
+    transition: all $animation-duration - .3s ease-in-out
+  .no-touch &:hover
+    background-color: transparent
+    color: #191919
+    i,
+    span
+      color: #191919
+    svg
+      path
+        fill: #191919
+
+.btn-cart
+  width: 48px
+  height: 48px
+  line-height: 48px
+  padding: 0
+  text-align: center
+  svg
+    display: block
+    position: absolute
+    +center
+    width: auto
+    height: 20px
+    path
+      fill: $txt-white
+      transition: all $animation-duration - .3s ease-in-out
+  span
+    display: none
+  +MQ(XL)
+    padding: 0 3.6rem
+    width: auto
+    height: 5.2rem
+    line-height: 5.1rem
+    svg
+      display: none
+    span
+      display: inline-block
+
+.to-top-button
+  display: inline-block
+  +position(fixed, null 20px 20px null)
+  width: 40px
+  height: 40px
+  background-color: #191919
+  z-index: 3
+  visibility: hidden
+  opacity: 0
+  transition: opacity $animation-delay 0s, visibility 0s $animation-delay
+  &.is-visible, &.fade-out
+    transition: opacity $animation-delay 0s, visibility 0s 0s
+  .no-touch &
+    &:hover
+      transition: opacity $animation-delay 0s, visibility 0s 0s
+      opacity: 1
+  &.is-visible
+    visibility: visible
+    opacity: 1
+  &.fade-out
+    opacity: 1
+  svg
+    position: absolute
+    +center
+    width: auto
+    height: 16px
+    path
+      fill: $txt-white
+  +MQ(M)
+    +position(fixed, null 20px 20px null)
+  +MQ(XL)
+    &.fade-out
+      opacity: 0.3
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Intro Styles Start
+/* ------------------------------------------------*/
+.demo__intro
+  min-height: 480px
+  text-align: center
+  background-color: #efefef
+  background-image: url('../img/demo/bg-demo.jpg')
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.intro__header
+  position: relative
+  padding: 32px calc(10% - 15px) 0 calc(10% - 15px)
+  z-index: 1
+  +MQ(M)
+    padding: 48px calc(10% - 15px) 0 calc(10% - 15px)
+  +MQ(XL)
+    padding: 48px 85px 0 85px
+  +MQ(XXL)
+    padding: 80px 105px 0 105px
+
+.header__logo
+  img
+    width: 86px
+  +MQ(XL)
+    img
+      width: 106px
+
+.header__buttons
+  text-align: right
+  padding-top: 4px
+
+.intro__content
+  position: relative
+  padding: 0 calc(10% - 15px)
+  z-index: 1
+  +MQ(XL)
+    padding: 0 85px
+  +MQ(XXL)
+    padding: 0 105px
+
+.headline
+  padding: 100px 0 30px 0
+  +MQ(XL)
+    padding: 30px 0
+
+.headline__icon
+  width: 262px
+  padding-left: 3rem
+  height: 160px
+  margin: 0 auto 2.4rem
+  +MQ(M)
+    width: 262px
+
+.intro__illusrations
+  position: relative
+  width: 100%
+  overflow: hidden
+  z-index: 10
+  padding-bottom: 3.2rem
+  +MQ(M)
+    padding-bottom: 0
+  +MQ(XL)
+    height: 616px
+  +MQ(XXL)
+    height: 874px
+
+.illustration-1
+  width: 100%
+  height: auto
+  z-index: 1
+  +MQ(XL)
+    position: absolute
+    +center(x)
+    bottom: 0
+    width: 946px
+  +MQ(XXL)
+    width: 1344px
+
+.illustration-2, .illustration-3, .illustration-4, .illustration-5
+  display: none
+  +MQ(XL)
+    display: block
+    position: absolute
+
+.illustration-2
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+  +MQ(XL)
+    left: 48px
+    top: 140px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    left: 66px
+    top: 200px
+    width: 516px
+    height: 290px
+
+.illustration-3
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2)
+  +MQ(XL)
+    left: 86px
+    top: 290px
+    width: 208px
+    height: 156px
+  +MQ(XXL)
+    left: 118px
+    top: 414px
+    width: 300px
+    height: 225px
+
+.illustration-4
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+  +MQ(XL)
+    right: 50px
+    top: 170px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    width: 516px
+    height: 290px
+
+.illustration-5
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2)
+  +MQ(XL)
+    right: -80px
+    top: 280px
+    width: 360px
+    height: 202px
+  +MQ(XXL)
+    right: -120px
+    top: 400px
+    width: 516px
+    height: 290px
+/* ------------------------------------------------*/
+/* Intro Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Preview Sections Styles Start
+/* ------------------------------------------------*/
+.demo__examples
+  background-color: #f9f9f9
+  padding: 3.2rem 0 0 0
+  color: #444
+  &.last-section
+    padding: 3.2rem 0
+  +MQ(M)
+    padding: 4.4rem 0 0 0
+    &.last-section
+      padding: 4.4rem 0
+
+.examples__headline
+  padding: 0 calc(10% - 15px)
+  margin-bottom: 4.8rem
+  text-align: center
+  +MQ(XL)
+    padding: 0 85px
+  +MQ(XXL)
+    padding: 0 105px
+
+.examples__links
+  position: relative
+  padding: 0 calc(10% - 15px)
+  +MQ(XL)
+    padding: 0 85px
+  +MQ(XXL)
+    padding: 0 105px
+
+.links__item
+  position: relative
+  a
+    display: block
+    .no-touch &:hover
+      .item__image
+        transform: translateY(-1.6rem)
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+      .new-item
+        &::before
+          top: -14px
+          box-shadow: 0 8px 17px 2px rgba(0,0,0,0.1), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.14)
+
+.item__image
+  position: relative
+  width: 100%
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.06), 0 3px 14px 2px rgba(0,0,0,0.08), 0 5px 5px -3px rgba(0,0,0,0.1)
+  transform: translateY(0)
+  transition: all .5s cubic-bezier(0, 1.04, 0.68, 1.04)
+
+.new-item
+  &::before
+    content: 'NEW'
+    +position(absolute, -10px -10px null null)
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #f31247
+    color: $txt-white
+    font: normal 600 1.2rem/51px $default-font
+    letter-spacing: 0.06rem
+    text-transform: uppercase
+    text-align: center
+    z-index: 12
+    transition: all .3s ease-in-out
+
+.item__caption
+  display: block
+  text-align: center
+  margin-bottom: 4.8rem
+  p
+    margin-top: 1.6rem
+  +MQ(M)
+    margin-bottom: 5.6rem
+    p
+      margin-top: 2.4rem
+  +MQ(XXL)
+    margin-bottom: 7.2rem
+    p
+      margin-top: 3rem
+/* ------------------------------------------------*/
+/* Preview Sections Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Subscribe Section Styles Start
+/* ------------------------------------------------*/
+.demo__subscribe
+  padding: 8rem calc(10% - 15px)
+  background-color: shade($bsc-grey-dark, 40%)
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  background-image: url("../img/demo/bg-demo-subscribe.jpg")
+  +MQ(M)
+    padding: 10rem calc(10% - 15px)
+  +MQ(XL)
+    padding: 10rem 85px
+  +MQ(XXL)
+    padding: 11.6rem 105px
+
+.subscribe__container
+  position: relative
+  max-width: 500px
+  margin: 0 auto
+  border: 1rem solid $bsc-white
+  padding: .2rem
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  background-image: url(../img/demo/bg-demo-subscribe-form.jpg)
+  background-color: $bsc-white
+  text-align: center
+
+.subscribe__background
+  background-color: $bsc-white
+  padding: 4.8rem 3.2rem
+
+.subscribe__title
+  .title
+    font: normal 700 2.8rem/1.1 $caption-font
+    color: #191919
+    margin: 0 0 3rem 0
+  .subtitle
+    font: normal 400 1.6rem/1.7 $default-font
+    color: #000000
+    margin: 0 0 3rem 0
+  +MQ(M)
+    padding: 0 1.2rem
+    .title
+      font-size: 3.2rem
+  +MQ(XXL)
+    .title
+      font-size: 4rem
+
+.form-container
+  position: relative
+
+form
+  position: relative
+  width: 100%
+  input
+    position: relative
+    display: block
+    width: 100%
+    border: none
+    outline: none
+    margin: 0
+    padding: 0
+    background-color: transparent
+    padding: 1rem .3rem
+    font-family: $default-font
+    font-size: 1.6rem
+    transition: border .6s
+    height: 4.8rem
+    margin: 0 0 2.4rem 0
+  +MQ(M)
+    input
+      width: calc(100% - 2.4rem)
+      margin: 0 1.2rem 2.4rem 1.2rem
+
+.form-dark
+  ::-webkit-input-placeholder
+    color: $txt-dark
+  :-moz-placeholder
+    color: $txt-dark
+  ::-moz-placeholder
+    color: $txt-dark
+  :-ms-input-placeholder
+    color: $txt-dark
+  input:focus:required:invalid,
+  textarea:focus:required:invalid
+    color: $txt-dark
+  input:required:valid,
+  textarea:required:valid
+    color: $txt-dark
+  input, textarea
+    border-bottom: 1px solid $bsc-grey-medium
+    color: $txt-dark
+    &:focus
+      border-bottom: 1px solid $txt-dark
+
+.form
+  opacity: 1
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-hidden
+    opacity: 0
+  &.contact-form
+    text-align: center
+
+.reply-group
+  position: absolute
+  width: 100%
+  max-width: none
+  top: 0
+  left: 0
+  transform: translateX(0) translateY(0)
+  padding: 0
+  background-color: transparent
+  border: none
+  text-align: center
+  opacity: 0
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-visible
+    opacity: 1
+  i
+    display: block
+    font-size: 4rem
+    line-height: 1
+    color: #191919
+
+  .reply-group__title
+    font-family: $caption-font
+    font-size: 1.8rem
+    font-weight: 700
+    margin: .8rem 0
+    color: #191919
+
+  .reply-group__text
+    display: block
+    font-size: 1.4rem
+    color: #191919
+/* ------------------------------------------------*/
+/* Subscribe Section Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Footer Styles Start
+/* ------------------------------------------------*/
+.demo__footer
+  position: relative
+  padding: 48px calc(10% - 15px)
+  background-color: $bsc-white
+  p
+    font: normal 400 1.4rem/1.2 $default-font
+    color: #191919
+    text-align: center
+  a
+    font: italic 700 1.4rem/1.2 $caption-font
+    color: #191919
+  i
+    color: #191919
+  +MQ(XL)
+    padding: 48px 85px
+    p, a, i
+      font-size: 1.6rem
+  +MQ(XXL)
+    padding: 48px 105px
+/* ------------------------------------------------*/
+/* Footer Styles End
+/* ------------------------------------------------*/

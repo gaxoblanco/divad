@@ -1,0 +1,50 @@
+.footer
+  padding: 7.2rem 10%
+  +MQ(M)
+    padding: 7.2rem 10%
+  +MQ(XXL)
+    padding: 7.2rem 0
+
+.footer__socials
+  position: relative
+  text-align: center
+  ul
+    display: inline-block
+    margin: 0
+    padding: 0
+    +clearfix
+    li
+      display: block
+      float: left
+      margin: 0 3rem 0 0
+      &:last-of-type
+        margin: 0
+      a
+        display: block
+        position: relative
+        width: 2.4rem
+        height: 2.4rem
+        line-height: 2.4rem
+        text-align: center
+        font-size: 1.5rem
+        color: #191919
+        transition: color .3s
+        &.light-text
+          color: $txt-white
+        i
+          font-size: 1.5rem
+      .no-touch &:hover
+        a
+          color: $txt-light
+
+.footer__copyright
+  text-align: center
+  font-size: 1.2rem
+  color: $txt-light
+  margin: .8rem auto 0
+  a
+    color: $txt-light
+    font-weight: 400
+    transition: color .3s
+    .no-touch &:hover
+      color: $txt-white

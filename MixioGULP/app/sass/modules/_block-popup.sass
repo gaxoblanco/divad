@@ -1,0 +1,169 @@
+.popup
+  +position(fixed, 0 0 null null)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  background-color: rgba(0,0,0,.6)
+  visibility: hidden
+  opacity: 0
+  transition: opacity $animation-duration - .3s, visibility $animation-duration - .3s
+  z-index: 1000
+  &.notify
+    &.is-visible
+      opacity: 1
+      visibility: visible
+      transition: opacity $animation-duration - .3s 0s, visibility 0s 0s
+      .popup__content
+        transform: translateY(0)
+        .popup-title__title
+          opacity: 1
+          transform: translateY(0)
+          transition: transform .3s $animation-delay - .1s , opacity .3s $animation-delay - .1s
+        .popup-title__subtitle
+          opacity: 1
+          transform: translateY(0)
+          transition: transform .3s $animation-delay , opacity .3s $animation-delay
+        .form
+          input
+            opacity: 1
+            transform: translateY(0)
+            transition: transform .3s $animation-delay + .1s , opacity .3s $animation-delay + .1s , border .6s
+          button
+            opacity: 1
+            transform: translateY(0)
+            transition: transform .3s $animation-delay +.2s , opacity .3s $animation-delay +.2s , padding .5s
+  &.writealine
+    &.is-visible
+      opacity: 1
+      visibility: visible
+      transition: opacity $animation-duration - .3s 0s, visibility 0s 0s
+      .popup__content
+        transform: translateY(0)
+        .popup-title__title
+          opacity: 1
+          transform: translateY(0)
+          transition: transform .3s $animation-delay - .1s , opacity .3s $animation-delay - .1s
+        .popup-title__subtitle
+          opacity: 1
+          transform: translateY(0)
+          transition: transform .3s $animation-delay , opacity .3s $animation-delay
+        .form
+          input
+            &[type="text"]
+              opacity: 1
+              transform: translateY(0)
+              transition: transform .3s $animation-delay + .1s , opacity .3s $animation-delay + .1s , border .6s
+            &[type="email"]
+              opacity: 1
+              transform: translateY(0)
+              transition: transform .3s $animation-delay +.2s , opacity .3s $animation-delay +.2s , border .6s
+          textarea
+            opacity: 1
+            transform: translateY(0)
+            transition: transform .3s $animation-delay + .3s , opacity .3s $animation-delay + .3s , border .6s
+          .inputs-description
+            opacity: 1
+            transform: translateY(0)
+            transition: transform .3s $animation-delay + .4s , opacity .3s $animation-delay + .4s
+          button
+            opacity: 1
+            transform: translateY(0)
+            transition: transform .3s $animation-delay + .5s , opacity .3s $animation-delay + .5s , padding .5s
+
+.popup__content
+  position: relative
+  float: none
+  width: calc(100% - 3.2rem)
+  max-width: 500px
+  margin: 1.6rem auto 1.6rem
+  border: 1rem solid $bsc-white
+  padding: .2rem
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  background-color: $bsc-white
+  text-align: center
+  z-index: 12
+  cursor: auto
+  transform: translateY(-30px)
+  transition: transform $animation-duration - .5s ease-in-out
+  .popup-title__title,
+  .popup-title__subtitle
+      opacity: 0
+      transform: translateY(50px)
+      transition: opacity $animation-delay, transform $animation-delay
+  .form
+    input,
+    textarea,
+    button,
+    .inputs-description
+      opacity: 0
+      transform: translateY(50px)
+      transition: opacity $animation-delay, transform $animation-delay
+  +MQ(M)
+    margin: 3.2rem auto 3.2rem
+  +MQ(XXL)
+    margin: 4rem auto 4rem
+
+.popup__background
+  background-color: $bsc-white
+  padding: 6.4rem 3.2rem
+
+.popup__close
+  position: absolute
+  top: 0.2rem
+  right: 0.2rem
+  width: 64px
+  height: 64px
+  background-color: $bsc-white
+  font-size: 6rem
+  color: #191919
+  transform: scale(0)
+  transform-origin: center
+  transition: transform .3s, color $animation-duration - .3s ease-in-out
+  span
+    display: block
+    position: absolute
+    +center
+    width: 30px
+    height: 30px
+    &:before,
+    &::after
+      content: ""
+      display: block
+      +position(absolute, 14px null null 0)
+      width: 30px
+      height: 2px
+      background-color: $bsc-grey-medium
+      transform-origin: center
+      transition: all .3s ease-in-out
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+  &.is-scaled-up
+    transform: scale(1)
+  .no-touch &:hover
+    span
+      &:before,
+      &::after
+        background-color: $txt-black
+
+.popup-title
+  padding: 0
+  +MQ(M)
+    padding: 0 1.2rem
+
+.popup-title__title
+  font: normal 700 2.8rem/1.2 $caption-font
+  color: #191919
+  margin: 0 0 2.4rem 0
+  +MQ(M)
+    font-size: 3.2rem
+  +MQ(XXL)
+    font-size: 4rem
+
+.popup-title__subtitle
+  font: normal 400 1.6rem/1.7 Raleway,sans-serif
+  color: #000
+  margin: 0 0 3rem 0

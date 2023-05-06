@@ -1,0 +1,57 @@
+.contact-map
+  height: 600px
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+
+.map
+  position: relative
+  +MQ(XL)
+    height: 100%
+
+#google-container
+  position: relative
+  width: 100%
+  height: 600px
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+
+.map-fullwidth
+  #google-container
+    +MQ(M)
+      height: 600px
+
+#google-map
+  position: relative
+  height: 100%
+  +MQ(L)
+    width: 100%
+
+#zoom-in, #zoom-out
+  position: relative
+  height: 4rem
+  width: 4rem
+  border: 2px solid $bsc-white
+  margin-left: 3.2rem
+  background-color: transparent
+  font-size: 1.3rem
+  color: $txt-white
+  cursor: pointer
+  transition: background-color .3s
+  &.dark
+    border: 2px solid $bsc-grey-dark
+    color: $txt-black
+  i
+    position: absolute
+    +center
+  +MQ(XXL)
+    margin-left: 4rem
+
+#zoom-out
+  margin-top: -0.2rem
+  margin-bottom: 1.6rem
+  +MQ(XXL)
+    margin-bottom: 2rem
