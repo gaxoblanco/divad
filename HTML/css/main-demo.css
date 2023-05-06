@@ -446,62 +446,7 @@ body.loaded .intro__illusrations .illustration-5 {
           animation: 0.3s ease-in-out 1.4s 1 both slideInUp;
 }
 
-/* ------------------------------------------------*/
-/* Loading Animation Styles End */
-/* ------------------------------------------------*/
-/* ------------------------------------------------*/
-/* Fonts Start */
-/* ------------------------------------------------*/
-/* Raleway Font */
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/RalewayRegular/RalewayRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayRegular/RalewayRegular.woff") format("woff"), url("../fonts/RalewayRegular/RalewayRegular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/RalewayMedium/RalewayMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayMedium/RalewayMedium.woff") format("woff"), url("../fonts/RalewayMedium/RalewayMedium.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/RalewaySemiBold/RalewaySemiBold-LiningNums.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewaySemiBold/RalewaySemiBold-LiningNums.woff2") format("woff2"), url("../fonts/RalewaySemiBold/RalewaySemiBold-LiningNums.woff") format("woff"), url("../fonts/RalewaySemiBold/RalewaySemiBold-LiningNums.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/RalewayBold/RalewayBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayBold/RalewayBold.woff") format("woff"), url("../fonts/RalewayBold/RalewayBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/RalewayExtraBold/RalewayExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RalewayExtraBold/RalewayExtraBold.woff") format("woff"), url("../fonts/RalewayExtraBold/RalewayExtraBold.ttf") format("truetype");
-}
-/* Playfair Display Font */
-@font-face {
-  font-family: "PlayfairDisplay";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold-LiningNums.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold-LiningNums.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold-LiningNums.woff") format("woff"), url("../fonts/PlayfairDisplay-Bold/PlayfairDisplay-Bold-LiningNums.ttf") format("truetype");
-}
-@font-face {
-  font-family: "PlayfairDisplay";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.woff") format("woff"), url("../fonts/PlayfairDisplay-BoldItalic/PlayfairDisplay-BoldItalic.ttf") format("truetype");
-}
-@font-face {
-  font-family: "PlayfairDisplay";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.woff") format("woff"), url("../fonts/PlayfairDisplay-Italic/PlayfairDisplay-Italic.ttf") format("truetype");
-}
+
 /* ------------------------------------------------*/
 /* Fonts End */
 /* ------------------------------------------------*/
@@ -543,13 +488,14 @@ html {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   position: relative;
   min-width: 320px;
   overflow-x: hidden !important;
-  font: normal 400 1.6rem/1.7 "Raleway", sans-serif;
+  font: normal 400 1.6rem/1.7 "Poppins", sans-serif;
   background-color: #ffffff;
   color: #616161;
 }
@@ -608,7 +554,7 @@ a:hover, a:active, a:visited {
 /* Typography Styles Start */
 /* ------------------------------------------------*/
 h1 {
-  font: normal 700 3rem/1.2 "PlayfairDisplay", serif;
+  font: normal 700 3rem/1.2 "Poppins", serif;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   color: #191919;
@@ -617,7 +563,7 @@ h1 {
 }
 h1 small {
   display: block;
-  font: normal 400 1.4rem/1.7 "Raleway", sans-serif;
+  font: normal 400 1.4rem/1.7 "Poppins", sans-serif;
   text-transform: none;
   letter-spacing: normal;
   margin-top: 1rem;
@@ -632,7 +578,7 @@ h1 small {
 }
 
 .headline__title {
-  font: normal 700 3rem/1.2 "PlayfairDisplay", serif;
+  font: normal 700 3rem/1.2 "Poppins", serif;
   color: #262626;
   margin-bottom: 1.6rem;
 }
@@ -650,7 +596,7 @@ h1 small {
 }
 
 .headline__subtitle {
-  font: normal 300 1.6rem/1.7 "Raleway", sans-serif;
+  font: normal 300 1.6rem/1.7 "Poppins", sans-serif;
   max-width: 500px;
   margin: 0 auto;
   color: #444444;
@@ -662,7 +608,7 @@ h1 small {
 }
 
 figcaption p {
-  font: normal 500 1.2rem/1.1 "Raleway", sans-serif;
+  font: normal 500 1.2rem/1.1 "Poppins", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #262626;
@@ -693,6 +639,16 @@ figcaption p {
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.btn-line {
+  border: 1px solid #b6b6b6;
+  color: #191919;
+  margin-top: 20px;
+}
+
+.btn-caption{
+  padding: 18px 30px;
 }
 
 .btn-demo {
@@ -1138,7 +1094,7 @@ figcaption p {
 .links__item a {
   display: block;
 }
-.no-touch .links__item a:hover .item__image {
+.no-touch .links__item a:hover .item__card, .item__card_product {
   -webkit-transform: translateY(-1.6rem);
      -moz-transform: translateY(-1.6rem);
       -ms-transform: translateY(-1.6rem);
@@ -1154,7 +1110,7 @@ figcaption p {
           box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.1), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.14);
 }
 
-.item__image {
+.item__card, .item__card_product {
   position: relative;
   width: 100%;
   -webkit-box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.06), 0 3px 14px 2px rgba(0, 0, 0, 0.08), 0 5px 5px -3px rgba(0, 0, 0, 0.1);
@@ -1169,7 +1125,52 @@ figcaption p {
   -moz-transition: all 0.5s cubic-bezier(0, 1.04, 0.68, 1.04);
   transition: all 0.5s cubic-bezier(0, 1.04, 0.68, 1.04);
 }
-
+.item__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.item__card_product{
+  /* background-image: url(../img/demo/screens/6.jpg); */
+  background-color: rgb(196, 162, 179);
+  background-size: cover;
+  height: 300px;
+}
+.card_text {
+  margin: 20px;
+}
+.card_text-product {
+  margin: 20px;
+  padding-top: 10px;
+}
+.card_text-title{
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 26px;
+  font-weight: 500;
+}
+.card_text-title-product{
+  margin-left: 20px;
+  font-size: 26px;
+  font-weight: 500;
+  bottom: 30px;
+  position: absolute;
+}
+.card_img {
+  width: 100%;
+  height: 300px;
+  /* background: purple; */
+}
+.card_brands-product{
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.card_brands-product .circle {
+  background-color: rgb(174, 174, 174);
+  border-radius:100%;
+  width: 40px;
+  height: 40px;
+}
 .new-item::before {
   content: "NEW";
   position: absolute;
@@ -1181,7 +1182,7 @@ figcaption p {
        border-radius: 50%;
   background-color: #f31247;
   color: #ffffff;
-  font: normal 600 1.2rem/51px "Raleway", sans-serif;
+  font: normal 600 1.2rem/51px "Poppins", sans-serif;
   letter-spacing: 0.06rem;
   text-transform: uppercase;
   text-align: center;
@@ -1223,6 +1224,192 @@ figcaption p {
 /* ------------------------------------------------*/
 /* Subscribe Section Styles Start */
 /* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers End */
+/* ------------------------------------------------*/
+/* ------------------------------------------------*/
+/* Forms and Forms Reply Groups Start */
+/* ------------------------------------------------*/
+.form-content {
+  position: relative;
+}
+.form-content.contact {
+  padding-top: 1.4rem;
+}
+
+.form-container {
+  position: relative;
+}
+
+form {
+  position: relative;
+  width: 100%;
+}
+form input, form textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  padding: 1.2rem 1.2rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  -webkit-transition: border 0.6s;
+  -o-transition: border 0.6s;
+  -moz-transition: border 0.6s;
+  transition: border 0.6s;
+}
+form input {
+  height: 5rem;
+  margin: 0 0 2.4rem 0;
+}
+form textarea {
+  height: 12rem;
+  resize: none;
+  margin: 0 0 0.6rem 0;
+}
+@media only screen and (min-width: 768px) {
+  form input {
+    width: -moz-calc(100% - 2.4rem);
+    width: calc(100% - 2.4rem);
+    margin: 0 1.2rem 2.4rem 1.2rem;
+  }
+  form textarea {
+    width: -moz-calc(100% - 2.4rem);
+    width: calc(100% - 2.4rem);
+    float: left;
+    margin: 0 1.2rem 0.6rem 1.2rem;
+  }
+  form .inputs-description {
+    width: 100%;
+    float: left;
+  }
+  form.contact-form input {
+    width: -moz-calc(50% - 2.4rem);
+    width: calc(50% - 2.4rem);
+    float: left;
+    margin: 0 1.2rem 2.4rem 1.2rem;
+  }
+  form.contact-form textarea {
+    width: -moz-calc(100% - 2.4rem);
+    width: calc(100% - 2.4rem);
+    float: left;
+    margin: 0 1.2rem 0.6rem 1.2rem;
+  }
+  form.contact-form button {
+    margin-left: 1.2rem;
+  }
+  form.notify-form button {
+    margin-left: 1.2rem;
+  }
+}
+
+.form-dark ::-webkit-input-placeholder {
+  color: #303030;
+}
+.form-dark :-moz-placeholder {
+  color: #303030;
+}
+.form-dark ::-moz-placeholder {
+  color: #303030;
+}
+.form-dark :-ms-input-placeholder {
+  color: #303030;
+}
+.form-dark input:focus:required:invalid,
+.form-dark textarea:focus:required:invalid {
+  color: #303030;
+}
+.form-dark input:required:valid,
+.form-dark textarea:required:valid {
+  color: #303030;
+}
+.form-dark input, .form-dark textarea {
+  border: 1px solid #b6b6b6;
+  color: #303030;
+}
+.form-dark input:focus, .form-dark textarea:focus {
+  border: 1px solid #303030;
+}
+.form-dark .inputs-description {
+  display: block;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 1.2rem;
+  color: #858585;
+}
+@media only screen and (min-width: 768px) {
+  .form-dark .inputs-description {
+    padding: 0 1.6rem;
+  }
+}
+
+.form-light input, .form-light textarea {
+  font-weight: 300;
+}
+.form-light ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light :-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-light input:focus:required:invalid,
+.form-light textarea:focus:required:invalid {
+  color: #ffffff;
+}
+.form-light input:required:valid,
+.form-light textarea:required:valid {
+  color: #ffffff;
+}
+.form-light input, .form-light textarea {
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+}
+.form-light input:focus, .form-light textarea:focus {
+  border-bottom: 1px solid #b6b6b6;
+}
+.form-light .inputs-description {
+  display: block;
+  margin-bottom: 1.4rem;
+  text-align: right;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+@media only screen and (min-width: 768px) {
+  .form-light .inputs-description {
+    padding: 0 1.6rem;
+  }
+}
+
+.form {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+.form.is-hidden {
+  opacity: 0;
+}
+.form.contact-form button {
+  margin-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .form.contact-form button {
+    margin-left: 1.2rem;
+  }
+}
+
 .demo__subscribe {
   padding: 8rem -moz-calc(10% - 15px);
   padding: 8rem calc(10% - 15px);
@@ -1252,7 +1439,7 @@ figcaption p {
 
 .subscribe__container {
   position: relative;
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   border: 1rem solid #ffffff;
   padding: 0.2rem;
@@ -1271,12 +1458,12 @@ figcaption p {
 }
 
 .subscribe__title .title {
-  font: normal 700 2.8rem/1.1 "PlayfairDisplay", serif;
+  font: normal 700 2.8rem/1.1 "Poppins", serif;
   color: #191919;
-  margin: 0 0 3rem 0;
+  margin: 0 0 1rem 0;
 }
 .subscribe__title .subtitle {
-  font: normal 400 1.6rem/1.7 "Raleway", sans-serif;
+  font: normal 400 1.6rem/1.7 "Poppins", sans-serif;
   color: #000000;
   margin: 0 0 3rem 0;
 }
@@ -1312,7 +1499,7 @@ form input {
   padding: 0;
   background-color: transparent;
   padding: 1rem 0.3rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
   -webkit-transition: border 0.6s;
   -o-transition: border 0.6s;
@@ -1370,7 +1557,28 @@ form input {
 .form.contact-form {
   text-align: center;
 }
-
+.form_textarea {
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  font-family: "Poppins", serif;
+}
+.contact-text{
+  display: grid;
+  margin-top: 20px;
+}
+.contact-text .interactiv_a {
+  font-weight: 500;
+}
+.text_map {
+  margin: 16px;
+}
+form.contact-form textarea {
+  width: -moz-calc(100% - 2.4rem);
+  width: calc(100% - 2.4rem);
+  float: left;
+  margin: 0 1.2rem 0.6rem 1.2rem;
+}
 .reply-group {
   position: absolute;
   width: 100%;
@@ -1401,7 +1609,7 @@ form input {
   color: #191919;
 }
 .reply-group .reply-group__title {
-  font-family: "PlayfairDisplay", serif;
+  font-family: "Poppins", serif;
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0.8rem 0;
@@ -1426,12 +1634,12 @@ form input {
   background-color: #ffffff;
 }
 .demo__footer p {
-  font: normal 400 1.4rem/1.2 "Raleway", sans-serif;
+  font: normal 400 1.4rem/1.2 "Poppins", sans-serif;
   color: #191919;
   text-align: center;
 }
 .demo__footer a {
-  font: italic 700 1.4rem/1.2 "PlayfairDisplay", serif;
+  font: italic 700 1.4rem/1.2 "Poppins", serif;
   color: #191919;
 }
 .demo__footer i {
