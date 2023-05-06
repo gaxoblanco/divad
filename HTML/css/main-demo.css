@@ -1649,30 +1649,19 @@ form.contact-form textarea {
   padding: 48px calc(10% - 15px);
   background-color: #ffffff;
 }
-.demo__footer p {
-  font: normal 400 1.4rem/1.2 "Poppins", sans-serif;
-  color: #191919;
-  text-align: center;
+.footer_container {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
 }
-.demo__footer a {
-  font: italic 700 1.4rem/1.2 "Poppins", serif;
-  color: #191919;
+.footer_icon {
+  width: 30px;
+  height: 30px;
+  transition: all 0.4s ease-in-out;
 }
-.demo__footer i {
-  color: #191919;
-}
-@media only screen and (min-width: 1200px) {
-  .demo__footer {
-    padding: 48px 85px;
-  }
-  .demo__footer p, .demo__footer a, .demo__footer i {
-    font-size: 1.6rem;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .demo__footer {
-    padding: 48px 105px;
-  }
+.footer_icon:hover {
+  width: 32px;
+  height: 32px;
 }
 
 /* ------------------------------------------------*/
