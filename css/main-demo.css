@@ -25,6 +25,7 @@
  *  9. Preview Sections
  *  10. Subscribe Section
  *  11. Footer
+ *  12. Map
  * ------------------------------------------------
  * Table of Contents End
  * ------------------------------------------------ */
@@ -815,12 +816,12 @@ figcaption p {
 .demo__intro {
   min-height: 280px;
   text-align: center;
-  background-color: #efefef;
-  background-image: url("../img/demo/bg-demo.jpg");
+  background-image: url("../img/demo/bg-demo-subscribe.jpg");
   background-position: center;
   background-repeat: no-repeat;
   -moz-background-size: cover;
        background-size: cover;
+       
 }
 
 .intro__header {
@@ -828,6 +829,8 @@ figcaption p {
   padding: 32px -moz-calc(10% - 15px) 0 -moz-calc(10% - 15px);
   padding: 32px calc(10% - 15px) 0 calc(10% - 15px);
   z-index: 1;
+  min-height: 280px;
+  background-color: #000000eb;
 }
 @media only screen and (min-width: 768px) {
   .intro__header {
@@ -880,6 +883,9 @@ figcaption p {
 .headline {
   padding: 100px 0 30px 0;
 }
+.headline h1{
+  color: white;
+}
 @media only screen and (min-width: 1200px) {
   .headline {
     padding: 30px 0;
@@ -889,7 +895,6 @@ figcaption p {
 .headline__icon {
   width: 262px;
   padding-left: 3rem;
-  height: 160px;
   margin: 0 auto 2.4rem;
 }
 @media only screen and (min-width: 768px) {
@@ -1455,7 +1460,7 @@ form textarea {
 
 .subscribe__container {
   position: relative;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
   border: 1rem solid #ffffff;
   padding: 0.2rem;
@@ -1463,7 +1468,6 @@ form textarea {
   background-position: center center;
   -moz-background-size: cover;
        background-size: cover;
-  background-image: url(../img/demo/bg-demo-subscribe-form.jpg);
   background-color: #ffffff;
   text-align: center;
 }
@@ -1667,3 +1671,123 @@ form.contact-form textarea {
 /* ------------------------------------------------*/
 /* Footer Styles End */
 /* ------------------------------------------------*/
+/* Google Map Start */
+/* ------------------------------------------------*/
+.contact-map {
+  height: 600px;
+}
+@media only screen and (min-width: 768px) {
+  .contact-map {
+    height: 760px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact-map {
+    height: 100%;
+  }
+}
+
+.map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1200px) {
+  .map {
+    height: 100%;
+    
+  }
+}
+
+#google-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+@media only screen and (min-width: 768px) {
+  #google-container {
+    height: 760px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #google-container {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .map-fullwidth #google-container {
+    height: 600px;
+  }
+}
+
+#google-map {
+  position: relative;
+  height: 100%;
+}
+@media only screen and (min-width: 992px) {
+  #google-map {
+    width: 100%;
+  }
+}
+
+#zoom-in, #zoom-out {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  border: 2px solid #ffffff;
+  margin-left: 3.2rem;
+  background-color: transparent;
+  font-size: 1.3rem;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#zoom-in.dark, #zoom-out.dark {
+  border: 2px solid #343434;
+  color: #262626;
+}
+#zoom-in i, #zoom-out i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+     -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+@media only screen and (min-width: 1400px) {
+  #zoom-in, #zoom-out {
+    margin-left: 4rem;
+  }
+}
+
+#zoom-out {
+  margin-top: -0.2rem;
+  margin-bottom: 1.6rem;
+}
+@media only screen and (min-width: 1400px) {
+  #zoom-out {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ------------------------------------------------*/
+/* Google Map End */
+
+.contact_container {
+  display: flex;
+  gap: 60px;
+}
+@media only screen and (max-width: 1200px) {
+  .contact_container {
+    flex-direction: column;
+  }
+}
