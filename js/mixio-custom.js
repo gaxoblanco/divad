@@ -133,9 +133,8 @@ $(function() {
       transition: 'fade2',
       transitionDuration: 2000,
       slides: [
-        { src: "http://via.placeholder.com/1920x1280" },
-        { src: "http://via.placeholder.com/1920x1280" },
-        { src: "http://via.placeholder.com/1920x1280" }
+        { src: "img/services/imgA.jpg" },
+        { src: "img/services/imgB.jpg" },
       ],
       animation: [ 'kenburnsUp', 'kenburnsDown', 'kenburnsLeft', 'kenburnsRight' ]
     });

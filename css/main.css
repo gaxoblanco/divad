@@ -3499,3 +3499,9 @@ nav.dark ul.menu a span::before {
 /* ------------------------------------------------*/
 /* Popup Dialogs Styles End */
 /* ------------------------------------------------*/
+
+figure .card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
