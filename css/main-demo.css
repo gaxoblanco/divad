@@ -1682,7 +1682,7 @@ form.contact-form textarea {
   }
 }
 
-.map {
+/* .map {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1772,7 +1772,7 @@ form.contact-form textarea {
   #zoom-out {
     margin-bottom: 2rem;
   }
-}
+} */
 
 /* ------------------------------------------------*/
 /* Google Map End */
