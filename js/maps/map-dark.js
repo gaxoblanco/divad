@@ -29,13 +29,13 @@
 
 $(function() {
   // Insert Your Google Maps Parameters
-  var latitude = 40.761425,
-    longitude = -73.977643,
-    map_zoom = 14;
+  var latitude = -25.211299,
+    longitude = -57.517916,
+    map_zoom = 16;
 
   // Google Map Custom Marker Icon
   var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
-  var marker_url = ( is_internetExplorer11 ) ? 'img/location/location-light.png' : 'img/location/location-light.svg';
+  var marker_url = ( is_internetExplorer11 ) ? 'img/location-light.png' : 'img/location-light.svg';
 
     var main_color = '#160c37',
       saturation_value= 1,
