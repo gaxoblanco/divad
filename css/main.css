@@ -696,7 +696,7 @@ body.fullscreen-loaded .intro__socials {
   letter-spacing: 0.1em;
   margin: 0 0 3.6rem 0;
 }
-.contact-container {
+div.contact-container {
   height: 100%;
   display: grid !important;
   align-content: center;
@@ -708,9 +708,18 @@ body.fullscreen-loaded .intro__socials {
   margin-top: 28px;
   font-size: 18px;
 }
-.contact_info-container a span{
-  color: rgb(231, 34, 34);
-  margin-left: 6px;
+.contact_info-container a{
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.contact_info-container svg {
+  width:30px;
+  height: 22px;
+}
+a.a_svg-point {
+  align-items: start;
+  margin-top: 6px;
 }
 @media only screen and (min-width: 768px) {
   .section-title .subtitle {
@@ -1002,7 +1011,7 @@ blockquote.dark cite {
 }
 
 .btn-line {
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
   padding: 1.8rem 0 0 0;
   font: normal 800 1.4rem/1 "Poppins", sans-serif;
   color: #191919;
@@ -1015,7 +1024,7 @@ blockquote.dark cite {
   display: none;
 }
 .btn-line:last-of-type {
-  margin: 0;
+  /* margin: 0; */
 }
 .btn-line.centered span {
   padding: 0 0 0 5.8rem;
