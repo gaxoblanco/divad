@@ -83,7 +83,7 @@ $(function() {
           scrollingSpeed: 1000,
           responsiveWidth: 1200,
           navigation: true,
-          loopBottom: true,
+          loopBottom: false,
       		verticalCentered: false
         });
       };
